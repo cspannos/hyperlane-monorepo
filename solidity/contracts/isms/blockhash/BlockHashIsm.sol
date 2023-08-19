@@ -23,6 +23,14 @@ abstract contract BlockHashISM is IBlockHashIsm, Ownable {
 
     // ============ Core Variables ============
     mapping(address => bool) public oracles; //oracles added by owner
+    mapping(address => bytes) public _oraclesToBlockHash; //oracles to blockhash mapping
+
+
+
+
+
+
+
 
 
 
