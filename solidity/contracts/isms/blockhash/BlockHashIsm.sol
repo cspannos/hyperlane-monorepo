@@ -13,3 +13,6 @@ import {Oracle} from "../../libs/Oracle.sol";
 
 // ============ External Imports ============ //
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
+
+// ============ CONTRACT ============
+abstract contract BlockHashISM is IBlockHashIsm, Ownable {
