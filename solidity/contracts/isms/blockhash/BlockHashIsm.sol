@@ -7,7 +7,7 @@ import {IInterchainSecurityModule} from "../../interfaces/IInterchainSecurityMod
 import {IMailbox} from "../../interfaces/IMailbox.sol";
 import {Message} from "../../libs/Message.sol";
    /** 
-    * @notice This project assumes a magic onchain oracle. The oracle imported below dos not exist
+    * @notice This project assumes a magic onchain oracle. The oracle imported below dose not exist
     */
 import {Oracle} from "../../libs/Oracle.sol";
 
@@ -16,3 +16,6 @@ import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 
 // ============ CONTRACT ============
 abstract contract BlockHashISM is IBlockHashIsm, Ownable {
+
+    // ============ Events ============
+    event BlockHash(uint256 _height);
