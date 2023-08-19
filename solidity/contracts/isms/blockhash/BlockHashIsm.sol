@@ -19,3 +19,5 @@ abstract contract BlockHashISM is IBlockHashIsm, Ownable {
 
     // ============ Events ============
     event BlockHash(uint256 _height);
+    event MessageDispatched(bool _messageDispatched);
+
