@@ -21,3 +21,8 @@ abstract contract BlockHashISM is IBlockHashIsm, Ownable {
     event BlockHash(uint256 _height);
     event MessageDispatched(bool _messageDispatched);
 
+    // ============ Core Variables ============
+    mapping(address => bool) public oracles; //oracles added by owner
+
+
+
