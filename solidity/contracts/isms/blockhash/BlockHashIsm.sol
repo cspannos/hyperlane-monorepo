@@ -23,7 +23,6 @@ abstract contract BlockHashISM is IBlockHashIsm, Ownable {
 
     // ============ Core Variables ============
     mapping(address => bool) public oracles; //oracles added by owner
-    mapping(address => bool) public _pingOracles; //to check if oracles are online
     mapping(address => bytes) public _oraclesToBlockHash; //oracles to blockhash mapping
 
     // ============ Oracle Timeout Variables ============
