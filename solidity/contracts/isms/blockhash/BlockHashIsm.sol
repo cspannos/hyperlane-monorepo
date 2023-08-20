@@ -22,17 +22,17 @@ abstract contract BlockHashISM is IBlockHashIsm, Ownable {
     // ============ Events ============
     event BlockHash(uint256 _height);
     event MessageDispatched(bool _messageDispatched);
-    event BlockHeight (uint256 execution_payload_header.block_hash)
-    event BlockHashISM (string currentModule)
-    event Oracle (address oracle)
+    event BlockHeight (uint256 execution_payload_header.block_hash);
+    event BlockHashISM (string currentModule);
+    event Oracle (address oracle);
 
     // ============ STRUCT ============
     struct MessageDispatched {
-        uint32 origin_chainid:
+        uint32 origin_chainid;
         uint256 block_hash;
         uint256 parent_hash;
         uint256 attestation_signatures;
-        uint256 state_root:
+        uint256 state_root;
         }    
 
     // ============ Core Variables ============
