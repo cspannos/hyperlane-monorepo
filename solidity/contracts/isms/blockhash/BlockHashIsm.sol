@@ -47,6 +47,9 @@ abstract contract BlockHashISM is IBlockHashIsm, Ownable {
     error OracleDown(address attemptedAccess);
 
     // ============ Constructor ============
+    /**
+     * @notice setting up blockHashOracle core function below
+     */
     constructor(
         address oracle,
         BlockHash _oracle,
