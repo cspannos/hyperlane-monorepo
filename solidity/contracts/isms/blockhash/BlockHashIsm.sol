@@ -28,9 +28,9 @@ abstract contract BlockHashISM is IBlockHashIsm, Ownable {
     mapping(address => bool) public oracles; //oracles added by owner
     mapping(address => bytes) public _oraclesToBlockHash; //oracles to blockhash mapping
 
-    // ============ Oracle Timeout Variables ============
-    uint256 public oracleTimeout; //duration set by owner in deployment OR after via changeOracleTimeout() for throwing error
-
+    /**
+     * @notice To do: add oracle timeout variables
+    */
     // ============ Custom Errors ============
     error OracleDown(address attemptedAccess);
 
