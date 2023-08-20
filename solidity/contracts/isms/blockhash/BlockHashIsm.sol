@@ -94,3 +94,15 @@ abstract contract BlockHashISM is IBlockHashIsm, Ownable {
        return msgdispatched.state_root;
       }
 
+    function getExecutionPayload;() 
+        public 
+        view 
+        returns (uint256) {
+        return msgdispatched.execution_payload;
+       }
+
+
+
+
+
+
