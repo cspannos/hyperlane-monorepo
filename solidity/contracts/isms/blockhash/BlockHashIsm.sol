@@ -4,7 +4,6 @@ pragma solidity >=0.8.0;
 // ============ Internal Imports ============ //
 import {IBlockHashIsm} from "../../interfaces/isms/IBlockHashIsm.sol";
 import {IInterchainSecurityModule} from "../../interfaces/IInterchainSecurityModule.sol";
-import {MessageDispatched} from "../../MessageDispatched.sol"
 import {IMailbox} from "../../interfaces/IMailbox.sol";
 import {Message} from "../../libs/Message.sol";
    /** 
