@@ -31,7 +31,8 @@ abstract contract BlockHashISM is IBlockHashIsm, Ownable {
 
     /**
      * @notice To do: add oracle timeout variables
-    */
+     * @notice To do: add function to ping oracle
+     */
     // ============ Custom Errors ============
     error OracleDown(address attemptedAccess);
 
