@@ -31,7 +31,15 @@ abstract contract BlockHashISM is IBlockHashIsm, Ownable {
     // ============ Custom Errors ============
     error OracleDown(address attemptedAccess);
 
-
+    // ============ Constructor ============
+    constructor(
+        address oracle,
+        BlockHash _oracle,
+        uint256 _height,
+    ) {
+        _set(oracle, _oracle);
+        messageDispatched = _messageDispatched;
+    }
 
 
 
