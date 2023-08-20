@@ -26,7 +26,7 @@ abstract contract BlockHashISM is IBlockHashIsm, Ownable {
     event BlockHashISM (string currentModule);
     event Oracle (address oracle);
 
-    // ============ STRUCT ============
+    // ============ Struct ============
     struct MessageDispatched {
         uint32 origin_chainid;
         uint256 block_hash;
@@ -56,6 +56,41 @@ abstract contract BlockHashISM is IBlockHashIsm, Ownable {
         messageDispatched = _messageDispatched;
     }
 
+    // ============ Public Functions ============
+    MessageDispatched = msgdispatched
 
+    function getChainId;() 
+        public 
+        view 
+        returns (uint32) {
+        return msgdispatched.origin_chainid;
+       }
 
+     function getBlockHash;() 
+         public 
+         view 
+         returns (uint256) {
+         return msgdispatched.block_hash;
+        }
+
+    function getParentHash;() 
+        public 
+        view 
+        returns (uint256) {
+        return msgdispatched.parent_hash;
+       }
+
+    function getAttestationSignatures;() 
+       public 
+       view 
+       returns (uint256) {
+       return msgdispatched.attestation_signatures;
+      }
+
+    function getStateRoot;() 
+       public 
+       view 
+       returns (uint256) {
+       return msgdispatched.state_root;
+      }
 
