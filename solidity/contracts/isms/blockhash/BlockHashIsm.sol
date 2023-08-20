@@ -15,6 +15,7 @@ import {Oracle} from "../../libs/Oracle.sol";
 // ============ External Imports ============ //
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 
+
 // ============ CONTRACT ============
 abstract contract BlockHashISM is IBlockHashIsm, Ownable {
 
@@ -24,6 +25,15 @@ abstract contract BlockHashISM is IBlockHashIsm, Ownable {
     event BlockHeight (uint256 execution_payload_header.block_hash)
     event BlockHashISM (string currentModule)
     event Oracle (address oracle)
+
+    // ============ STRUCT ============
+    struct MessageDispatched {
+        uint32 origin_chainid:
+        uint256 block_hash;
+        uint256 parent_hash;
+        uint256 attestation_signatures;
+        uint256 state_root:
+        }    
 
     // ============ Core Variables ============
     mapping(address => bool) public oracles; //oracles added by owner
