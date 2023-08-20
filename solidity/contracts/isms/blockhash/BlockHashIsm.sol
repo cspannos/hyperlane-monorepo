@@ -7,7 +7,7 @@ import {IInterchainSecurityModule} from "../../interfaces/IInterchainSecurityMod
 import {IMailbox} from "../../interfaces/IMailbox.sol";
 import {Message} from "../../libs/Message.sol";
    /** 
-    * @notice This project assumes a magic onchain oracle. The oracle imported below dose not exist
+    * @notice This project assumes an onchain oracle. The oracle imported below is mock only and does not exist.
     */
 import {Oracle} from "../../libs/Oracle.sol";
 
