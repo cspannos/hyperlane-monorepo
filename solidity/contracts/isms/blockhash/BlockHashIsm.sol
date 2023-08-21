@@ -7,16 +7,16 @@ import {IInterchainSecurityModule} from "../../interfaces/IInterchainSecurityMod
 import {IMailbox} from "../../interfaces/IMailbox.sol";
 import {Message} from "../../libs/Message.sol";
    /** 
-    * @notice This project assumes an onchain oracle. The oracle imported below is mock only and does not exist.
+    * @notice This project assumes an onchain oracle on the destination chain. The oracle imported below is mock only and does not exist.
     */
-import {Oracle} from "../../libs/Oracle.sol";
+import {DestinationChainOracle} from "../../libs/DestinationChainOracle.sol";
 
 // ============ External Imports ============ //
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 
 
 // ============ CONTRACT ============
-abstract contract BlockHashISM is IBlockHashIsm, Ownable {
+abstract contract BlockHashIsm is IBlockHashIsm, Ownable {
 
     // ============ Events ============
     event BlockHash(uint256 _height);
