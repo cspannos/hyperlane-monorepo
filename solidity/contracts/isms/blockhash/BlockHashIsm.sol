@@ -5,10 +5,6 @@ pragma solidity >=0.8.21; // As of Solidity 0.8.21 qualified access to foreign e
 import {IInterchainSecurityModule} from "../../interfaces/IInterchainSecurityModule.sol";
 import {IMailbox} from "../../interfaces/IMailbox.sol";
 import {Message} from "../../libs/Message.sol";
-   /** 
-    * @notice This project assumes an onchain oracle on the destination chain. The oracle imported below is mock only and does not exist.
-    */
-import {DestinationChainOracle} from "../../libs/DestinationChainOracle.sol";
 
 // ============ External Imports ============ //
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
