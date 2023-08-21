@@ -11,7 +11,7 @@ import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 
 
 // ============ CONTRACT ============
-contract BlockHashIsm is IBlockHashIsm, Ownable {
+contract BlockHashIsm {
 
     // ============ Events ============
     event BlockHeight(uint256 _height);
