@@ -19,7 +19,7 @@ import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 contract BlockHashIsm is IBlockHashIsm, Ownable {
 
     // ============ Events ============
-    event BlockHash(uint256 _height);
+    event BlockHeight(uint256 _height);
     event MessageDispatched(bool _messageDispatched);
     event BlockHeight (uint256 execution_payload_header.block_hash);
     event BlockHashISM (string currentModule);
