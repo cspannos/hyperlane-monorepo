@@ -33,13 +33,6 @@ contract BlockHashIsm {
     mapping(address => bool) public oracles; //oracles added by owner
     mapping(address => bytes) public _oraclesToBlockHash; //oracles to blockhash mapping
 
-    /**
-     * @notice To do: add oracle timeout variables
-     * @notice To do: add function to ping oracle
-     */
-    // ============ Custom Errors ============
-    error OracleDown(address attemptedAccess);
-
     // ============ Constructor ============
     /**
      * @notice setting up blockHashOracle core function below
