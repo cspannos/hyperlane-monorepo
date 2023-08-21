@@ -61,42 +61,42 @@ contract BlockHashIsm is IBlockHashIsm, Ownable {
     // ============ Public Functions ============
     MessageDispatched = msgdispatched
 
-    function getChainId;() 
+    function getchainid;() 
         public 
         view 
         returns (uint32) {
         return msgdispatched.origin_chainid;
        }
 
-     function getBlockHash;() 
+     function getblockhash;() 
          public 
          view 
          returns (uint256) {
          return msgdispatched.block_hash;
         }
 
-    function getParentHash;() 
+    function getparenthash;() 
         public 
         view 
         returns (uint256) {
         return msgdispatched.parent_hash;
        }
 
-    function getAttestationSignatures;() 
+    function getattestationsignatures;() 
        public 
        view 
        returns (uint256) {
        return msgdispatched.attestation_signatures;
       }
 
-    function getStateRoot;() 
+    function getstateroot;() 
        public 
        view 
        returns (uint256) {
        return msgdispatched.state_root;
       }
 
-    function getExecutionPayload;() 
+    function gettransactionhash;() 
         public 
         view 
         returns (uint256) {
