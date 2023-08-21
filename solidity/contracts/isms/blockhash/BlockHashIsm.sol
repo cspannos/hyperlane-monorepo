@@ -21,7 +21,7 @@ contract BlockHashIsm is IBlockHashIsm, Ownable {
     // ============ Events ============
     event BlockHeight(uint256 _height);
     event MessageDispatched(bool _messageDispatched);
-    event BlockHeight (uint256 execution_payload_header.block_hash);
+    event MessageTxHash (uint256 transactionHash);
     event BlockHashISM (string currentModule);
     event Oracle (address oracle);
 
@@ -63,14 +63,12 @@ contract BlockHashIsm is IBlockHashIsm, Ownable {
 
     function getchainid;() 
         public 
-        view 
         returns (uint32) {
         return msgdispatched.origin_chainid;
        }
 
      function getblockhash;() 
          public 
-         view 
          returns (uint256) {
          return msgdispatched.block_hash;
         }
@@ -83,22 +81,19 @@ contract BlockHashIsm is IBlockHashIsm, Ownable {
        }
 
     function getattestationsignatures;() 
-       public 
-       view 
-       returns (uint256) {
-       return msgdispatched.attestation_signatures;
-      }
+        public  
+        returns (uint256) {
+        return msgdispatched.attestation_signatures;
+       }
 
     function getstateroot;() 
-       public 
-       view 
-       returns (uint256) {
-       return msgdispatched.state_root;
-      }
+        public 
+        returns (uint256) {
+        return msgdispatched.state_root;
+       } 
 
     function gettransactionhash;() 
         public 
-        view 
         returns (uint256) {
         return msgdispatched.execution_payload;
        }
