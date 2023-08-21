@@ -61,6 +61,12 @@ contract BlockHashIsm is IBlockHashIsm, Ownable {
     // ============ Public Functions ============
     MessageDispatched = msgdispatched
 
+    function setdestoracle (address oracle);
+        public
+        returns (address) {
+        return msgdispatched.destination_oracle)
+       }
+
     function getchainid;() 
         public 
         returns (uint32) {
