@@ -2,7 +2,6 @@
 pragma solidity >=0.8.21; // As of Solidity 0.8.21 qualified access to foreign events is allowed, supporting this usecase.
 
 // ============ Internal Imports ============ //
-import {IBlockHashIsm} from "../../interfaces/isms/IBlockHashIsm.sol";
 import {IInterchainSecurityModule} from "../../interfaces/IInterchainSecurityModule.sol";
 import {IMailbox} from "../../interfaces/IMailbox.sol";
 import {Message} from "../../libs/Message.sol";
