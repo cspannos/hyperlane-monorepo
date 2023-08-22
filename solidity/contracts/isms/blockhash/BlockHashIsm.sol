@@ -15,9 +15,6 @@ import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 contract BlockHashIsm {
 
     // ============ Events ============
-    event BlockHeight(uint256 _height);
-    event MessageDispatched(bool _messageDispatched);
-    event MessageTxHash (uint256 transactionHash);
     event BlockHashISM (string currentModule);
     event Oracle (address oracle);
 
