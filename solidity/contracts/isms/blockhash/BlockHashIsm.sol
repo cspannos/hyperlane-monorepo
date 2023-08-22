@@ -22,10 +22,10 @@ contract BlockHashIsm {
     /**
      * @notice set oracle address
      */
-    constructor(address _destinationChainOracle) DestinationChainOracle(_destinationChainOracle) {
+    constructor(address _blockHashOracle) BlockHashOracle(_blockHashOracle) {
                require(
-                   Address.isContract(_destinationChainOracle),
-                   "Hyperlane Oracle: Invalid Oracle"
+                   Address.isContract(_blockHashOracle),
+                   "Invalid Oracle"
                );
            }
 
