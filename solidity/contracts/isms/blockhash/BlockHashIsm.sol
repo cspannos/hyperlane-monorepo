@@ -42,7 +42,7 @@ contract BlockHashIsm {
         emit BlockHashOracle.TransactionHash(); // assumed oracle event
         emit IMessageDispatcher.MessageDispatched(); // emits bytes32 indexed messageId, address indexed from, uint256 indexed toChainId, address to, bytes data
         emit IMailbox.sol.DispatchId();
-        emit (BlockHashISM);
+        emit BlockHashISM();
     }
 
   }
