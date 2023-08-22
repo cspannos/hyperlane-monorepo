@@ -24,16 +24,14 @@ contract BlockHashIsm {
 
     // ============ Constructor ============
     /**
-     * @notice setting up blockHashOracle core function below
+     * @notice set oracle address
      */
-    constructor(
-        address oracle,
-        BlockHash _oracle,
-        uint256 _height,
-    ) {
-        _set(oracle, _oracle);
-        messageDispatched = _messageDispatched;
-    }
+    constructor(address _destinationChainOracle) DestinationChainOracle(_destinationChainOracle) {
+               require(
+                   Address.isContract(_destinationChainOracle),
+                   "Hyperlane Oracle: Invalid Oracle"
+               );
+           }}
 
     // ============ Public Functions ============
     MessageDispatched = msgdispatched
