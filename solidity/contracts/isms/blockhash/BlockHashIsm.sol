@@ -83,9 +83,15 @@ contract BlockHashIsm {
         returns (uint256) {
         return msgdispatched.execution_payload;
        }
+}
 
-
-
+// Based on feature changes to Solidity 0.8.21 enabling access to foreign events we will emit events from these contracts:
+    function messagedispatched(address _message, verified) public {
+        emit BlockHashOracle.BlockHeight(); // assumed oracle event
+        emit BlockHashOracle.TransactionHash(); // assumed oracle event
+        emit IMessageDispatcher.MessageDispatched();
+        emit IMailbox.sol.DispatchId();
+    }
 
 
 
