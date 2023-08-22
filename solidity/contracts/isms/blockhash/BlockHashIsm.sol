@@ -31,8 +31,10 @@ contract BlockHashIsm {
            }
 
     // ============ Public Functions ============
-    // @notice Based on feature changes to Solidity 0.8.21 enabling access to foreign events we will emit events from these contracts below. This is why this iteration does not utilize JSON-RPC methods to access origin chain ethereum.
-    // @notice I assume that the arbitrary bytes passed by metadata (specified by an off-chain relayer to verify messages) include the message transaction hash and validator signatures.
+    /** @notice Solidity 0.8.21 enables access to foreign events so we will emit events from these contracts. Using the JSON-RPC method instead would include access data from execution_payload, as transactions passed from the execution client. 
+     * @notice I assume that the arbitrary bytes passed by metadata (specified by an off-chain relayer to verify messages) include the message transaction hash and validator signatures. 
+     */
+
     function messagedispatched(address _message, bytes metadata) public view returns (bool){
         if (IInterchainSecurityModule.metadata == BlockHashOracle.TransactionHash) 
         { 
