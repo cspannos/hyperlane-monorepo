@@ -34,52 +34,6 @@ contract BlockHashIsm {
            }}
 
     // ============ Public Functions ============
-    MessageDispatched = msgdispatched
-
-    function setdestoracle (address oracle);
-        public
-        returns (address) {
-        return msgdispatched.destination_oracle)
-       }
-
-    function getchainid;() 
-        public 
-        returns (uint32) {
-        return msgdispatched.origin_chainid;
-       }
-
-     function getblockhash;() 
-         public 
-         returns (uint256) {
-         return msgdispatched.block_hash;
-        }
-
-    function getparenthash;() 
-        public 
-        view 
-        returns (uint256) {
-        return msgdispatched.parent_hash;
-       }
-
-    function getattestationsignatures;() 
-        public  
-        returns (uint256) {
-        return msgdispatched.attestation_signatures;
-       }
-
-    function getstateroot;() 
-        public 
-        returns (uint256) {
-        return msgdispatched.state_root;
-       } 
-
-    function gettransactionhash;() 
-        public 
-        returns (uint256) {
-        return msgdispatched.execution_payload;
-       }
-}
-
 // Based on feature changes to Solidity 0.8.21 enabling access to foreign events we will emit events from these contracts:
     function messagedispatched(address _message, verified) public {
         emit BlockHashOracle.BlockHeight(); // assumed oracle event
