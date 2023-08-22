@@ -32,7 +32,7 @@ contract BlockHashIsm {
     // ============ Public Functions ============
     // @notice Based on feature changes to Solidity 0.8.21 enabling access to foreign events we will emit events from these contracts:
     function messagedispatched(address _message, bytes metadata) public view returns (bool){
-        if (metadata == BlockHashOracle.TransactionHash) 
+        if (IInterchainSecurityModule.metadata == BlockHashOracle.TransactionHash) 
         { 
              return true;
         }  
