@@ -18,10 +18,6 @@ contract BlockHashIsm {
     event BlockHashISM (string currentModule);
     event Oracle (address oracle);
 
-    // ============ Core Variables ============
-    mapping(address => bool) public oracles; //oracles added by owner
-    mapping(address => bytes) public _oraclesToBlockHash; //oracles to blockhash mapping
-
     // ============ Constructor ============
     /**
      * @notice set oracle address
@@ -41,6 +37,5 @@ contract BlockHashIsm {
         emit IMessageDispatcher.MessageDispatched();
         emit IMailbox.sol.DispatchId();
     }
-
-
+  }
 
