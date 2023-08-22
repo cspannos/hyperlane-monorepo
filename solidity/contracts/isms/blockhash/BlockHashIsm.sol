@@ -30,14 +30,15 @@ contract BlockHashIsm {
            }
 
     // ============ Public Functions ============
-    // @notice Based on feature changes to Solidity 0.8.21 enabling access to foreign events we will emit events from these contracts:
+    // @notice Based on feature changes to Solidity 0.8.21 enabling access to foreign events we will emit events from these contracts.
+    // @notice I assume that the arbitrary bytes passed by metadata (specified by an off-chain relayer to verify messages) include the message transaction hash and validator signatures.
     function messagedispatched(address _message, bytes metadata) public view returns (bool){
         if (IInterchainSecurityModule.metadata == BlockHashOracle.TransactionHash) 
         { 
              return true;
         }  
         emit Oracle();
-        emit OriginChain():
+        emit OriginChain();
         emit BlockHashOracle.BlockHeight(); // assumed oracle event
         emit BlockHashOracle.TransactionHash(); // assumed oracle event
         emit IMessageDispatcher.MessageDispatched(); // emits bytes32 indexed messageId, address indexed from, uint256 indexed toChainId, address to, bytes data
@@ -46,6 +47,3 @@ contract BlockHashIsm {
     }
 
   }
-
-
-
