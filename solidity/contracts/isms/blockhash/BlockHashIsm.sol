@@ -21,15 +21,6 @@ contract BlockHashIsm {
     event BlockHashISM (string currentModule);
     event Oracle (address oracle);
 
-    // ============ Struct ============
-    struct MessageDispatched {
-        uint32 origin_chainid;
-        uint256 block_hash;
-        uint256 parent_hash;
-        uint256 attestation_signatures;
-        uint256 state_root;
-        }    
-
     // ============ Core Variables ============
     mapping(address => bool) public oracles; //oracles added by owner
     mapping(address => bytes) public _oraclesToBlockHash; //oracles to blockhash mapping
