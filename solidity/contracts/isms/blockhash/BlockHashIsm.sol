@@ -5,7 +5,7 @@ pragma solidity >=0.8.21; // As of Solidity 0.8.21 qualified access to foreign e
 import {IInterchainSecurityModule} from "../../interfaces/IInterchainSecurityModule.sol";
 import {IMailbox} from "../../interfaces/IMailbox.sol";
 import {Message} from "../../libs/Message.sol";
-import {IMessageDispatcher} "../../hooks/ERC5164/interfaces/IMessageDispatcher.sol"
+import {IMessageDispatcher} from "../../hooks/ERC5164/interfaces/IMessageDispatcher.sol"
 
 // ============ External Imports ============ //
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
