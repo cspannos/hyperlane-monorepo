@@ -17,6 +17,7 @@ contract BlockHashIsm {
     // ============ Events ============
     event BlockHashISM (string currentModule);
     event Oracle (address oracle);
+    event OriginChain (uint32 chainid)
 
     // ============ Constructor ============
     /**
